@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your Own Virtual Music Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Build Your Own Virtual Music Gallery</h1>
+    </header>
+      <canvas id="particle-background"></canvas>
+    <div class="content">
+        <div class="buttons-section">
+            <button class="action-button" id="fetch-song" aria-label="Fetch a song">Draw!</button>
+            <button class="action-button" id="add-to-collection" aria-label="Add to collection">Add!</button>
+            <button class="gallery-button" id="gallery-page-button" aria-label="Go to Virtual Gallery">Virtual Gallery</button>
+        </div>
+        <div class="player-card">
+            <div id="album-art" class="disabled">
+                <div id="album-image" style="display: flex; justify-content: center; align-items: center; height: 100%; font-size: 1.5rem; color: white;">
+                  
+                </div>
+                <div class="overlay">
+                    <h2 id="song-title">Song Title</h2>
+                    <p id="artist-name">Artist Name</p>
+                    <button id="play-button" class="play-button"></button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="particleEffect.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

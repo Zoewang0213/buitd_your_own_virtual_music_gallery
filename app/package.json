@@ -1,0 +1,28 @@
+{
+  "name": "glitch-spotify-virtual-gallery",
+  "version": "1.0.0",
+  "description": "A simple Node app for building a Spotify virtual gallery with Deezer API support, hosted on Glitch.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors-anywhere": "^0.4.4"
+  },
+  "engines": {
+    "node": "14.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://glitch.com/edit/#!/your-project-name"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "express",
+    "cors-anywhere",
+    "deezer",
+    "glitch"
+  ]
+}

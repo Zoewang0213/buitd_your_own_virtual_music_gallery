@@ -1,0 +1,164 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow: hidden;
+    background-color: #e8eaef; /* 背景采用柔和灰白色 */
+}
+
+#homePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9; /* 背景颜色更浅 */
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px); /* 鼠标悬停效果 */
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#imageList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+#imageList img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#imageList img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.button {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  
+}
+
+
+.button:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+}
+
+#virtualGallery {
+    display: none;
+}
+
+#info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #444;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    font-size: 14px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#homeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    background: #00FF8C; /* 绿色背景 */
+    color: #000000; /* 黑色文字 */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif; /* 设置为 Inter 字体 */
+    font-weight: 700; /* 粗体 */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* 添加阴影和缩放效果的过渡 */
+}
+
+#homeButton:hover {
+    box-shadow: 0 0 15px 5px rgba(0, 255, 140, 0.8); /* 荧光阴影效果 */
+    transform: scale(1.05); /* 鼠标悬停时按钮略微放大 */
+}
+
+.artwork-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85);
+    color: #333;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.artwork-container button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #1db954;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.artwork-container button:hover {
+    background-color: #14833b;
+}
+
+#movementButtons {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+#movementButtons button {
+    background: white;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#movementButtons button:active {
+    background: lightgray; /* 鼠标点击时按钮变灰 */
+}

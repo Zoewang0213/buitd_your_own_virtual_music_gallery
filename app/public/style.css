@@ -1,0 +1,251 @@
+/* Modern Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #f5f5f5;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Typography */
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 2.5rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Content Layout */
+.content {
+    display: flex;
+    max-width: 1200px;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Buttons */
+.action-button, .gallery-button {
+    display: block; /* 改为块级元素，方便竖直排列 */
+    width: 100%; /* 按钮宽度拉满容器 */
+    max-width: 300px; /* 限制按钮最大宽度 */
+    padding: 1.5rem 2rem; /* 增大按钮内边距 */
+    font-size: 1.5rem; /* 调大字体 */
+    font-weight: 700; /* 加粗字体 */
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0.5rem; /* 调整按钮圆角 */
+    cursor: pointer;
+    margin: 2rem auto; /* 添加外边距，使按钮之间有间隔 */
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.3s;
+}
+
+/* 默认样式 */
+.action-button {
+    background: #fff;
+    color: #000;
+}
+
+.gallery-button {
+    background: #00FF8C;
+    color: #000;
+}
+
+/* 悬浮时的荧光效果 */
+.action-button:hover,
+.gallery-button:hover {
+    transform: translateY(-2px);
+    background-position: right center;
+    box-shadow: 0 0 15px 5px rgba(0, 255, 140, 0.8); /* 荧光外阴影 */
+}
+
+/* 父容器 */
+.buttons-section {
+    display: flex;
+    flex-direction: column; /* 按钮垂直排列 */
+    align-items: center; /* 居中对齐 */
+    gap: 1rem; /* 按钮之间的间距 */
+    width: 100%; /* 占据整个容器宽度 */
+    max-width: 350px; /* 可选：限制整体容器宽度 */
+    margin: 0 auto; /* 居中对齐 */
+}
+/* 悬浮时的荧光效果 */
+.action-button:hover {
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.8); /* 白色荧光 */
+}
+
+.gallery-button:hover {
+    box-shadow: 0 0 15px 5px rgba(0, 255, 140, 0.8); /* 绿色荧光 */
+}
+/* Player Card */
+.player-card {
+    background: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 550px;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.player-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+.player-content {
+    text-align: center;
+}
+
+.player-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.artist {
+    font-size: 1.125rem;
+    color: #cccccc;
+    margin-bottom: 1.5rem;
+}
+
+/* Play Button */
+.play-button {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: #00FF8C;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+/* Album Art */
+#album-art {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #32A3F4;
+    aspect-ratio: 1 / 1; /* 确保宽高比固定为 1:1 */
+}
+
+#album-art::before {
+    content: "♬";
+    position: absolute;
+    font-size: 20vw;
+    color: rgba(255, 255, 255, 0.2);
+    z-index: 0; /* 确保字符在背景层 */
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    pointer-events: none;
+}
+
+#album-art:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+#album-image {
+    position: absolute;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* 确保图片覆盖 ♬ */
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none; /* 防止交互 */
+    z-index: 2; /* 确保覆盖在图片上 */
+    transition: opacity 0.3s;
+}
+
+#album-art.active:hover .overlay {
+    opacity: 1;
+    pointer-events: all; /* 允许交互 */
+}
+
+#song-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+#artist-name {
+    font-size: 1rem;
+    color: #b3b3b3;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .player-card {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* Particle Background */
+#particle-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* 确保背景不会遮挡内容 */
+}
